@@ -1,4 +1,4 @@
-# ubuntu-setup v1.1
+# ubuntu-devenv v1.1
 
 > Tested against Ubuntu 20.04 and 22.04.
 
@@ -7,7 +7,7 @@ The **bash** script `ubuntu.sh` is designed to offer minimal user interaction an
 Running it in 1 line:
 
 ``` bash
-sudo apt-get update && sudo apt-get install -y -q wget && /bin/bash -c "$(wget --no-cache -O- https://raw.githubusercontent.com/secretarium/ubuntu-setup/main/ubuntu.sh)"
+sudo apt-get update && sudo apt-get install -y -q wget && /bin/bash -c "$(wget --no-cache -O- https://raw.githubusercontent.com/secretarium/ubuntu-devenv/main/ubuntu.sh)"
 ```
 
 ## Visual changes
