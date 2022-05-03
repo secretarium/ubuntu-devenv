@@ -6,7 +6,7 @@ The **bash** script `ubuntu.sh` is designed to offer minimal user interaction an
 
 Running it in 1 line:
 ```
-sudo apt-get update && sudo apt-get install -y -q wget && /bin/bash -c "$(wget --no-cache -O- https://raw.githubusercontent.com/manuelgustavo/ubuntu-setup/main/ubuntu.sh)" 
+sudo apt-get update && sudo apt-get install -y -q wget && /bin/bash -c "$(wget --no-cache -O- https://raw.githubusercontent.com/manuelgustavo/ubuntu-setup/main/ubuntu.sh)"
 ```
 
 ## Visual changes
