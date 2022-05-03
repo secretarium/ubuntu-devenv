@@ -1,4 +1,4 @@
-# ubuntu-setup
+# ubuntu-setup v1.0
 
 > Tested against Ubuntu 22.04
 
