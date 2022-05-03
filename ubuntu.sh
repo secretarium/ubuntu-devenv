@@ -13,10 +13,19 @@ install_chrome()
 
 set_dark_theme()
 {
-    echo "Setting up gtk-theme to Yaru-dark"
-    gsettings set org.gnome.desktop.interface gtk-theme Yaru-dark # Legacy apps, can specify an accent such as Yaru-olive-dark
-    gsettings set org.gnome.desktop.interface color-scheme prefer-dark # new apps
-    gsettings reset org.gnome.shell.ubuntu color-scheme # if changed above
+    echo "Setting up theme to Yaru-dark"
+    declare release
+    release="$(lsb_release -r | awk -F '\t' '{print $2}')"
+    if [[ "${release}" = "20.04" ]]
+    then
+        gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-dark'
+    elif [[ "${release}" = "22.04" ]]
+    then
+        gsettings set org.gnome.desktop.interface gtk-theme Yaru-dark # Legacy apps, can specify an accent such as Yaru-olive-dark
+        gsettings set org.gnome.desktop.interface color-scheme prefer-dark # new apps
+    else
+        echo "Cannot setup theme for Ubuntu ${release}!"
+    fi
 }
 
 install_oh_my_zsh()
